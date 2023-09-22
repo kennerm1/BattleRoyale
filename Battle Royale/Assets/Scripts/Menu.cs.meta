@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: eca05fce64c18404d8d4834ec6f75b67
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mainScreen: {instanceID: 0}
+  - createRoomScreen: {instanceID: 0}
+  - lobbyScreen: {instanceID: 0}
+  - lobbyBrowserScreen: {instanceID: 0}
+  - createRoomButton: {instanceID: 0}
+  - findRoomButton: {instanceID: 0}
+  - playerListText: {instanceID: 0}
+  - roomInfoText: {instanceID: 0}
+  - startGameButton: {instanceID: 0}
+  - roomListContainer: {instanceID: 0}
+  - roomButtonPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
