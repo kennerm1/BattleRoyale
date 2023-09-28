@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b06f4d18013908478a6b298036f4a7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 5
   curAmmo: 50
   maxAmmo: 50
   bulletSpeed: 10
@@ -415,8 +415,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef0007d06f215648a97ee2c4a107e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 10
-  sensY: 10
+  sensX: 7
+  sensY: 7
   minY: -90
   maxY: 90
   spectatorMoveSpeed: 10
