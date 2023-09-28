@@ -12,24 +12,19 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.ConnectUsingSettings();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public int maxPlayers = 10;
 
     public static NetworkManager instance;
     void Awake()
     {
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     public override void OnConnectedToMaster()
     {
-        Debug.Log("We've connected to the master server!");
+        //Debug.Log("We've connected to the master server!");
+        PhotonNetwork.JoinLobby();
     }
 
     public void CreateRoom(string roomName)
@@ -50,5 +45,21 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         PhotonNetwork.LoadLevel(sceneName);
     }
 
+    public override void OnDisconnected(DisconnectCause cause)
+    {
+        PhotonNetwork.LoadLevel("Menu");
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        GameManager.instance.alivePlayers--;
+        GameUI.instance.UpdatePlayerInfoText();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            GameManager.instance.CheckWinCondition();
+        }
+    }
 
 }
+
+

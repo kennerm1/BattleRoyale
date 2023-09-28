@@ -41,16 +41,12 @@ public class Menu : MonoBehaviourPunCallbacks, ILobbyCallbacks
         if (PhotonNetwork.InRoom)
         {
             // go to the lobby
+            SetScreen(lobbyScreen);
+            UpdateLobbyUI();
             // make the room visible
             PhotonNetwork.CurrentRoom.IsVisible = true;
             PhotonNetwork.CurrentRoom.IsOpen = true;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // changes the currently visible screen
@@ -180,3 +176,5 @@ public class Menu : MonoBehaviourPunCallbacks, ILobbyCallbacks
     }
 
 }
+
+
